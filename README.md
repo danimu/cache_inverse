@@ -3,45 +3,9 @@ cache_inverse
 
 Problem Assignment 2 --- R Programming | Coursera
 
+This is my solution to the second programming assignment of the R programming course on coursera.
 
-makeInverse <- function(mat = matrix) {
+The code is to be found within the "cache_inverse.R" file.
 
-	inv <- NULL
-	
-	set <- function(mat.new) {
-		mat <<- mat.new
-		inv <<- NULL
-	}
-
-	get <- function() {
-		mat
-	}
-
-	setinv <- function(inverse) {
-		inv <<- inverse
-	}
-
-	getinv <- function() {
-		inv
-	}
-
-	list(set = set, get = get, setinv = setinv, getinv = getinv)
-
-}
-
-
-
-cacheInverse <- function(mat, ...) {
-	
-	inv <- mat$getinv()
-
-	if (!is.null(inv)) {
-		message("getting cached data")
-		return(inv)
-	}
-	A <- mat$get()
-	inv <- solve(A)
-	mat$setinv(inv)
-	inv
-
-}
+Greetings!
+Daniel
